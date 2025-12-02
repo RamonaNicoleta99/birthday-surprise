@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Surprise ❤️</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Floating Hearts Effect -->
+    <div id="hearts-container"></div>
+
+    <!-- 1) UNLOCK SECTION -->
+    <div id="unlockSection" class="center-card fade-in">
+      <h2>🎁 Special Surprise</h2>
+      <p>Enter your birthdate to unlock your gift!</p>
+
+      <input
+        id="bday"
+        type="text"
+        class="form-control mt-3"
+        placeholder="dd-mm-yyyy"
+      />
+      <button id="unlockBtn" class="btn btn-danger w-100 mt-4">
+        Unlock My Gift ❤️
+      </button>
+    </div>
+
+    <!-- 2) CANDLE SECTION -->
+    <div id="candleSection" class="center-card hidden fade-in">
+      <h2>🎂 Make a Wish ✨</h2>
+      <p>Blow out the candle to make this year magical!</p>
+
+      <div class="cake">🎂</div>
+
+      <button id="blowBtn" class="btn btn-warning w-100 mt-4">
+        Blow the Candle 🎉
+      </button>
+    </div>
+
+    <!-- 3) 100 REASONS -->
+    <div id="reasonsSection" class="container hidden fade-in mb-5">
+      <h2 class="text-center mt-5 mb-4">
+        ❤️ 100 de motive pentru care te iubesc
+      </h2>
+
+      <div class="reasons-container">
+        <ol class="reasons-grid">
+          <li>Simțul tău al umorului.</li>
+          <li>Zâmbetul tău îmi luminează zilele.</li>
+          <li>Felul în care mă asculți fără să mă judeci.</li>
+          <li>Râsul tău care mă face fericită.</li>
+          <li>Îmbrățișările tale care mă fac să mă simt în siguranță.</li>
+          <li>Felul în care mă sprijini în momentele grele.</li>
+
+          <li>Felul în care mă faci să râd chiar și când sunt tristă.</li>
+          <li>Prietenia ta necondiționată.</li>
+          <li>Împărtășirea viselor și planurilor noastre.</li>
+          <li>Felul tău grijuliu.</li>
+          <li>Cum mă privești cu drag.</li>
+          <li>Cum știi mereu ce să spui ca să mă liniștești.</li>
+          <li>
+            Cum îmi faci inima să bată mai repede de fiecare dată când suntem
+            împreună.
+          </li>
+          <li>Bunătatea ta naturală.</li>
+          <li>Cum îți amintești detaliile mici despre mine.</li>
+          <li>Cum mă susții în tot ce fac.</li>
+          <li>Cum mă faci să mă simt acasă lângă tine.</li>
+          <li>Loialitatea ta.</li>
+          <li>Simțul tău al umorului.(x2)</li>
+          <li>Felul în care îți exprimi sentimentele.</li>
+          <li>Cum îți pasă sincer de starea mea.</li>
+          <li>Cum îmi luminezi zilele grele.</li>
+          <li>Disponibilitatea ta atunci când am nevoie.</li>
+          <li>Cum mă faci să mă simt apreciată.</li>
+          <li>Felul tău de a mă calma.</li>
+          <li>Felul în care te dedici relației noastre.</li>
+          <li>Cum o iubesti si ai grija de Luna.</li>
+          <li>Cum mă faci să mă simt puternică.</li>
+          <li>Curajul tău.</li>
+          <li>Inteligența ta.</li>
+          <li>Sensibilitatea ta frumoasă.</li>
+          <li>Creativitatea ta.</li>
+          <li>Maturitatea ta în situații grele.</li>
+          <li>Felul în care îmi respecți libertatea.</li>
+          <li>Cum îmi înțelegi emoțiile.</li>
+          <li>Cum mă faci să mă simt iubită cu adevărat.</li>
+          <li>Felul tău de a mă proteja.</li>
+          <li>Cum mă ajuți să evoluez.</li>
+          <li>Felul în care aduci liniște în viața mea.</li>
+          <li>Cum îmi accepți defectele.</li>
+          <li>Cum mă îmbrățișezi exact când trebuie.</li>
+          <li>Cum mă faci să simt că lumea e mai frumoasă lângă tine.</li>
+          <li>Felul în care mă inspiri.</li>
+          <li>Cum îmi faci diminețile mai frumoase.</li>
+          <li>Cum mă faci să cred în mine.</li>
+          <li>Bunele tale intenții în orice situație.</li>
+          <li>Cum mă încurajezi.</li>
+          <li>Cum împărtășești totul cu mine.</li>
+          <li>Felul în care mă alegi în fiecare zi.</li>
+          <li>Cum îți pasă de viitorul nostru.</li>
+          <li>Cum știi să mă surprinzi.</li>
+          <li>Cum mă faci să mă simt dorită.</li>
+          <li>Cum mă faci să simt fluturi în stomac.</li>
+          <li>Cum îmi aduci mereu bucurie chiar și în zilele grele.</li>
+          <li>Cum îți arăți afecțiunea prin gesturi mici.</li>
+          <li>Cum mă faci să mă simt specială.</li>
+          <li>Cum mă faci să râd din suflet.</li>
+          <li>Cum îmi spui adevărul chiar și când e greu.</li>
+          <li>Cum îți pasă de sănătatea mea.</li>
+          <li>Felul în care îți arăți grija.</li>
+          <li>Felul în care mă faci să mă simt apreciată.</li>
+          <li>Cum mă ajuți să văd lumea mai frumoasă.</li>
+          <li>Cum îți păstrezi calmul.</li>
+          <li>Cum mă lași să fiu eu însămi.</li>
+          <li>Felul în care îți arăți vulnerabilitatea.</li>
+          <li>Cum mă incluzi în viața ta.</li>
+          <li>Cum îți arăți dragostea prin gesturi neașteptate.</li>
+          <li>Cum mă ajuți să depășesc fricile mele.</li>
+          <li>Cum mă înțelegi fără cuvinte.</li>
+          <li>Cum îți exprimi iubirea.</li>
+          <li>Cum îmi transformi zilele obișnuite în ceva special.</li>
+          <li>Cum te bucuri pentru reușitele mele.</li>
+          <li>Cum mă ridici când sunt jos.</li>
+          <li>Cum mă ajuți să mă simt în siguranță.</li>
+          <li>Felul în care îți arăți recunoștința.</li>
+          <li>
+            Cum mă faci să mă simt recunoscătoare pentru fiecare zi împreună.
+          </li>
+          <li>Felul în care îți deschizi sufletul în fața mea.</li>
+          <li>Cum mă faci să simt că sunt suficienta.</li>
+          <li>Cum iubirea ta mă inspiră să fiu mai bună în fiecare zi.</li>
+          <li>Cum îmi înfrumusețezi viața în fiecare zi.</li>
+          <li>Felul în care îți pasă de emoțiile mele.</li>
+          <li>Cum mă iubești în felul tău unic.</li>
+          <li>Cum mă faci să vibrez lângă tine.</li>
+          <li>Cum mă ajuți să am încredere în viitor.</li>
+          <li>
+            Cum îmi spui sa nu imi mai fac atatea griji sau sa nu mai iau totul
+            personal.
+          </li>
+          <li>Cum mă faci să zâmbesc fără motiv.</li>
+          <li>Cum mă sprijini chiar și când nu cer asta.</li>
+          <li>Cum îmi aduci pace în suflet.</li>
+          <li>Cum îți amintești momentele noastre speciale.</li>
+          <li>Cum mă faci să fiu cea mai bună versiune a mea.</li>
+          <li>Cum mă iubești sincer, frumos și profund.</li>
+          <li>Cum îmi dai încredere în mine însămi.</li>
+          <li>Cum mă surprinzi mereu cu gesturi mici, dar semnificative.</li>
+          <li>Cum îți păstrezi calmul chiar și în momente tensionate.</li>
+          <li>Cum mă ajuți să văd partea pozitivă a lucrurilor.</li>
+          <li>Cum îți faci timp să mă asculți cu adevărat.</li>
+          <li>Cum îmi faci inima să tresară de bucurie.</li>
+          <li>Cum mă încurajezi să îmi urmez pasiunile.</li>
+          <li>Cum îmi oferi sprijin fără să aștepți nimic în schimb.</li>
+          <li>Pentru că ești tu și te iubesc așa cum ești. ❤️</li>
+        </ol>
+      </div>
+    </div>
+
+    <div id="memoriesSection" class="container hidden fade-in mb-5">
+      <h2 class="text-center mt-5 mb-4">📸 Our Precious Memories</h2>
+      <div class="memories-grid">
+        <!-- 40 de poze -->
+        <img src="images/memory1.jpg" alt="Memory 1" />
+        <img src="images/memory2.jpg" alt="Memory 2" />
+        <img src="images/memory3.jpg" alt="Memory 3" />
+        <img src="images/memory4.jpg" alt="Memory 4" />
+        <img src="images/memory5.jpg" alt="Memory 5" />
+        <img src="images/memory6.jpg" alt="Memory 6" />
+        <img src="images/memory7.jpg" alt="Memory 7" />
+        <img src="images/memory8.jpg" alt="Memory 8" />
+        <img src="images/memory9.jpg" alt="Memory 9" />
+        <img src="images/memory10.jpg" alt="Memory 10" />
+        <img src="images/memory11.jpg" alt="Memory 11" />
+        <img src="images/memory12.jpg" alt="Memory 12" />
+        <img src="images/memory13.jpg" alt="Memory 13" />
+        <img src="images/memory14.jpg" alt="Memory 14" />
+        <img src="images/memory15.jpg" alt="Memory 15" />
+        <img src="images/memory16.jpg" alt="Memory 16" />
+        <img src="images/memory17.jpg" alt="Memory 17" />
+        <img src="images/memory18.jpg" alt="Memory 18" />
+        <img src="images/memory19.jpg" alt="Memory 19" />
+        <img src="images/memory20.jpg" alt="Memory 20" />
+        <img src="images/memory21.jpg" alt="Memory 21" />
+        <img src="images/memory22.jpg" alt="Memory 22" />
+        <img src="images/memory23.jpg" alt="Memory 23" />
+        <img src="images/memory24.jpg" alt="Memory 24" />
+        <img src="images/memory25.jpg" alt="Memory 25" />
+        <img src="images/memory26.jpg" alt="Memory 26" />
+        <img src="images/memory27.jpg" alt="Memory 27" />
+        <img src="images/memory28.jpg" alt="Memory 28" />
+        <img src="images/memory29.jpg" alt="Memory 29" />
+        <img src="images/memory30.jpg" alt="Memory 30" />
+        <img src="images/memory31.jpg" alt="Memory 31" />
+        <img src="images/memory32.jpg" alt="Memory 32" />
+        <img src="images/memory33.jpg" alt="Memory 33" />
+        <img src="images/memory34.jpg" alt="Memory 34" />
+        <img src="images/memory35.jpg" alt="Memory 35" />
+        <img src="images/memory36.jpg" alt="Memory 36" />
+        <img src="images/memory37.jpg" alt="Memory 37" />
+        <img src="images/memory38.jpg" alt="Memory 38" />
+        <img src="images/memory39.jpg" alt="Memory 39" />
+        <img src="images/memory40.jpg" alt="Memory 40" />
+      </div>
+    </div>
+
+    <!-- LUNA, pisica noastră -->
+    <div id="lunaSection" class="container hidden fade-in mb-5">
+      <h2 class="text-center mt-5 mb-4">🐱 Luna, pisica noastră adorabilă</h2>
+      <div class="luna-card">
+        <img src="images/luna.jpg" alt="Luna" />
+        <p>❤️</p>
+      </div>
+    </div>
+
+    <!-- 5) LOVE LETTER (secret until clicked) -->
+    <div
+      id="loveLetterSection"
+      class="container hidden fade-in mb-5 text-center"
+    >
+      <h2 class="text-center mt-5 mb-4">❤️ Open My Heart</h2>
+
+      <!-- Envelope -->
+      <div id="envelope" class="envelope">
+        💌
+        <p class="tap-text">Click me</p>
+      </div>
+
+      <!-- Hidden Love Letter -->
+      <div id="letter" class="love-letter hidden">
+        <h3>Iubire ❤️</h3>
+        <p>
+          Îți mulțumesc că exiști în viața mea, că mă susții și că îmi faci
+          sufletul mai frumos. Îți promit că o să te iubesc în fiecare zi. La
+          mulți ani, BĂI! ❤️
+        </p>
+      </div>
+    </div>
+    <!-- Modal pentru poze -->
+    <div id="imageModal" class="image-modal hidden">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

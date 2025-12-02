@@ -1,0 +1,309 @@
+/* GENERAL */
+body {
+  background: linear-gradient(120deg, #ffe0e6, #fff5f5);
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HIDDEN ELEMENTS */
+.hidden {
+  display: none;
+}
+
+/* CARDS */
+.center-card {
+  max-width: 420px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FLOATING HEARTS */
+#hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: floatUp 4s linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 100 Reasons */
+.reasons-container {
+  max-height: 500px;
+  overflow-y: auto;
+  background: #ffeef0;
+  border: 2px solid #ff8ba0;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.reasons-grid {
+  list-style-position: inside;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 10px 20px;
+}
+
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 poze pe rând */
+  gap: 15px; /* spațiu între poze */
+}
+
+.memories-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.memories-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive: 2 pe rând pe mobil */
+@media (max-width: 768px) {
+  .memories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 pe rând pe ecrane foarte mici */
+@media (max-width: 480px) {
+  .memories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Grid pentru Memories */
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.memories-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.memories-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .memories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .memories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modal */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: fadeIn 0.3s;
+}
+
+/* Animatie fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal image */
+.image-modal img.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  transform: scale(0.7);
+  animation: zoomIn 0.3s forwards;
+}
+
+/* Animatie zoom */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close button */
+.image-modal .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.image-modal .close:hover {
+  color: #bbb;
+}
+
+/* Responsive modal */
+@media (max-width: 768px) {
+  .image-modal img.modal-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-modal img.modal-content {
+    width: 95%;
+  }
+}
+
+/* ENVELOPE + LETTER */
+.envelope {
+  font-size: 70px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.envelope:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.tap-text {
+  font-size: 14px;
+  margin-top: -10px;
+  color: #444;
+  animation: pulse 1.3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hidden Love Letter */
+.love-letter {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .center-card {
+    margin: 50px 20px;
+  }
+}
+/* LUNA CARD */
+.luna-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff0f5;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.luna-card img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+
+.luna-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.luna-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #d6336c;
+}
